@@ -26,7 +26,6 @@ router.post("/", (req, res)=>{
     res.send("post contact");
     const newContact = new Contact(req.body);
     newContact.save();
-
     
 
 });
