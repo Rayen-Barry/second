@@ -1,0 +1,32 @@
+1) Creating the server:
+
+.)Install express and mongoose (we call them porduction dependecies) :
+ - npm i express mongoose 
+.)Install nodemon (Dev dependecies) :
+ - npm i --save nodemon
+
+.) create server.js file to run the server containing the port...
+ - run the server by the script written npm run dev > "dev": "nodemon server.js"
+
+
+.) install the dotenv package as dev dependecies : 
+ - npm i --save-dev dotenv
+ - require the package in server.js : require('dotenv').config()
+
+
+2) DataBase connection:
+
+.) Create funcion to connect to the DataBase in folder /config/connectDB.js then I import it to the server
+- require the mongoose to let me connect with the DB : const mongoose = require("mongoose");
+- declare the url of the DB in the .env : DB_URI= 'mongodb://localhost:27017/sep_session'
+- call the DB url in the connect function :  mongoose.connect(process.env.DB_URI); 
+- call the function(connectDB.js) in the server.js and run it
+
+
+
+.)create schema/the models for my document/structure in new file models/file.js
+
+
+3) Routers Connections:
+express is the framework for the Routers
+.) create folder routes then create .js file which contain the routes
