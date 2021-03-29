@@ -21,7 +21,7 @@ router.get("/hello",(req,res)=>{
 // Params Body
 
 
-router.post("/",(req,res)=>{
+router.post("/", (req, res)=>{
     console.log(req.body);
     res.send("post contact");
     const newContact = new Contact(req.body);
